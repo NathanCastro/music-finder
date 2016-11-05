@@ -1,0 +1,28 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "parent",
+            "otherEntityName": "tag",
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": [],
+            "otherEntityField": "label"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "label",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "64"
+        }
+    ],
+    "changelogDate": "20161105182102",
+    "dto": "no",
+    "service": "serviceClass",
+    "entityTableName": "tag",
+    "pagination": "pager"
+}
