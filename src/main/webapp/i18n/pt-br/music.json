@@ -2,25 +2,24 @@
     "musicFinderApp": {
         "music" : {
             "home": {
-                "title": "Música",
-                "createLabel": "Criar novo Música",
-                "createOrEditLabel": "Criar ou editar Música",
-                "search": "Pesquisar por Música"
+                "title": "Music",
+                "createLabel": "Criar novo Music",
+                "createOrEditLabel": "Criar ou editar Music",
+                "search": "Pesquisar por Music"
             },
-            "created": "Um novo Música é criado com o identificador {{ param }}",
-            "updated": "Um Música é atualizado com o identificador {{ param }}",
-            "deleted": "Um Música é deletado com o identificador {{ param }}",
+            "created": "Um novo Music é criado com o identificador {{ param }}",
+            "updated": "Um Music é atualizado com o identificador {{ param }}",
+            "deleted": "Um Music é deletado com o identificador {{ param }}",
             "delete": {
-                "question": "Tem certeza de que deseja excluir Música {{ title }}?"
+                "question": "Tem certeza de que deseja excluir Music {{ id }}?"
             },
             "detail": {
-                "title": "Música"
+                "title": "Music"
             },
-            "title": "Título",
-            "lyrics": "Letra",
+            "title": "Title",
+            "lyrics": "Lyrics",
             "link": "Link",
-            "tags": "Tags",
-            "artist": "Artista"
+            "artist": "Artist"
         }
     }
 }

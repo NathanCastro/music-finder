@@ -3,7 +3,6 @@ package com.indigitous.musicfinder.web.rest;
 import com.indigitous.musicfinder.MusicFinderApp;
 
 import com.indigitous.musicfinder.domain.Music;
-import com.indigitous.musicfinder.domain.Tag;
 import com.indigitous.musicfinder.domain.Artist;
 import com.indigitous.musicfinder.repository.MusicRepository;
 import com.indigitous.musicfinder.service.MusicService;
@@ -94,11 +93,6 @@ public class MusicResourceIntTest {
                 .title(DEFAULT_TITLE)
                 .lyrics(DEFAULT_LYRICS)
                 .link(DEFAULT_LINK);
-        // Add required entity
-        Tag tags = TagResourceIntTest.createEntity(em);
-        em.persist(tags);
-        em.flush();
-        music.getTags().add(tags);
         // Add required entity
         Artist artist = ArtistResourceIntTest.createEntity(em);
         em.persist(artist);

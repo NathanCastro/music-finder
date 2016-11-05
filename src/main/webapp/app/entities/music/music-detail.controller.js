@@ -5,9 +5,9 @@
         .module('musicFinderApp')
         .controller('MusicDetailController', MusicDetailController);
 
-    MusicDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'previousState', 'entity', 'Music', 'Tag', 'Artist'];
+    MusicDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'previousState', 'entity', 'Music', 'Artist'];
 
-    function MusicDetailController($scope, $rootScope, $stateParams, previousState, entity, Music, Tag, Artist) {
+    function MusicDetailController($scope, $rootScope, $stateParams, previousState, entity, Music, Artist) {
         var vm = this;
 
         vm.music = entity;

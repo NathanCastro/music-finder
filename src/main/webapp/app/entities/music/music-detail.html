@@ -16,12 +16,6 @@
         <dd>
             <span>{{vm.music.link}}</span>
         </dd>
-        <dt><span data-translate="musicFinderApp.music.tags">Tags</span></dt>
-        <dd>
-            <span ng-repeat="tags in vm.music.tags">
-                <a ui-sref="tag-detail({id: tags.id})">{{tags.label}}</a>{{$last ? '' : ', '}}
-            </span>
-        </dd>
         <dt><span data-translate="musicFinderApp.music.artist">Artist</span></dt>
         <dd>
             <a ui-sref="artist-detail({id:vm.music.artist.id})">{{vm.music.artist.name}}</a>

@@ -40,16 +40,5 @@
             <!-- jhipster-needle-liquibase-add-column - Jhipster will add columns here, do not remove-->
         </createTable>
         
-        <createTable tableName="music_tags">
-            <column name="tags_id" type="bigint">
-                <constraints nullable="false"/>
-            </column>
-            <column name="music_id" type="bigint">
-                <constraints nullable="false"/>
-            </column>
-        </createTable>
-
-        <addPrimaryKey columnNames="music_id, tags_id" tableName="music_tags"/>
-        
     </changeSet>
 </databaseChangeLog>

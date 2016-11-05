@@ -37,7 +37,6 @@
                 <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
                     <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="title"><span data-translate="musicFinderApp.music.title">Title</span> <span class="glyphicon glyphicon-sort"></span></th>
-<!--                     <th jh-sort-by="lyrics"><span data-translate="musicFinderApp.music.lyrics">Lyrics</span> <span class="glyphicon glyphicon-sort"></span></th> -->
                     <th jh-sort-by="link"><span data-translate="musicFinderApp.music.link">Link</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="artist.name"><span data-translate="musicFinderApp.music.artist">Artist</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th></th>
@@ -47,7 +46,6 @@
                 <tr ng-repeat="music in vm.music track by music.id">
                     <td><a ui-sref="music-detail({id:music.id})">{{music.id}}</a></td>
                     <td>{{music.title}}</td>
-                    <!-- <td>{{music.lyrics}}</td> -->
                     <td>{{music.link}}</td>
                     <td>
                         <a ui-sref="artist-detail({id:music.artist.id})">{{music.artist.name}}</a>

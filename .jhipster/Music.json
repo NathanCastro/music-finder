@@ -2,17 +2,6 @@
     "fluentMethods": true,
     "relationships": [
         {
-            "relationshipName": "tags",
-            "otherEntityName": "tag",
-            "relationshipType": "many-to-many",
-            "relationshipValidateRules": [
-                "required"
-            ],
-            "otherEntityField": "label",
-            "ownerSide": true,
-            "otherEntityRelationshipName": "musics"
-        },
-        {
             "relationshipName": "artist",
             "otherEntityName": "artist",
             "relationshipType": "many-to-one",

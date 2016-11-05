@@ -8,17 +8,6 @@
     -->
     <changeSet id="20161105185146-2" author="jhipster">
         
-        <addForeignKeyConstraint baseColumnNames="music_id"
-                                 baseTableName="music_tags"
-                                 constraintName="fk_music_tags_music_id"
-                                 referencedColumnNames="id"
-                                 referencedTableName="music"/>
-        <addForeignKeyConstraint baseColumnNames="tags_id"
-                                 baseTableName="music_tags"
-                                 constraintName="fk_music_tags_tags_id"
-                                 referencedColumnNames="id"
-                                 referencedTableName="tag"/>
-        
         <addForeignKeyConstraint baseColumnNames="artist_id"
                                  baseTableName="music"
                                  constraintName="fk_music_artist_id"
