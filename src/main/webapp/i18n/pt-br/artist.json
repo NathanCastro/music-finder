@@ -1,0 +1,22 @@
+{
+    "musicFinderApp": {
+        "artist" : {
+            "home": {
+                "title": "Artists",
+                "createLabel": "Criar novo Artist",
+                "createOrEditLabel": "Criar ou editar Artist",
+                "search": "Pesquisar por Artist"
+            },
+            "created": "Um novo Artist é criado com o identificador {{ param }}",
+            "updated": "Um Artist é atualizado com o identificador {{ param }}",
+            "deleted": "Um Artist é deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Artist {{ id }}?"
+            },
+            "detail": {
+                "title": "Artist"
+            },
+            "name": "Name"
+        }
+    }
+}

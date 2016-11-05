@@ -1,0 +1,20 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "256"
+        }
+    ],
+    "changelogDate": "20161105180607",
+    "dto": "no",
+    "service": "serviceClass",
+    "entityTableName": "artist",
+    "pagination": "pager"
+}
