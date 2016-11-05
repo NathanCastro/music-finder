@@ -1,0 +1,26 @@
+{
+    "musicFinderApp": {
+        "music" : {
+            "home": {
+                "title": "Music",
+                "createLabel": "Create a new Music",
+                "createOrEditLabel": "Create or edit a Music",
+                "search": "Search for Music"
+            },
+            "created": "A new Music is created with identifier {{ param }}",
+            "updated": "A Music is updated with identifier {{ param }}",
+            "deleted": "A Music is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Music {{ id }}?"
+            },
+            "detail": {
+                "title": "Music"
+            },
+            "title": "Title",
+            "lyrics": "Lyrics",
+            "link": "Link",
+            "tags": "Tags",
+            "artist": "Artist"
+        }
+    }
+}

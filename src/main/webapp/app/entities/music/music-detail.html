@@ -1,0 +1,41 @@
+
+<div>
+    <h2><span data-translate="musicFinderApp.music.detail.title">Music</span> {{vm.music.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="musicFinderApp.music.title">Title</span></dt>
+        <dd>
+            <span>{{vm.music.title}}</span>
+        </dd>
+        <dt><span data-translate="musicFinderApp.music.lyrics">Lyrics</span></dt>
+        <dd>
+            <span>{{vm.music.lyrics}}</span>
+        </dd>
+        <dt><span data-translate="musicFinderApp.music.link">Link</span></dt>
+        <dd>
+            <span>{{vm.music.link}}</span>
+        </dd>
+        <dt><span data-translate="musicFinderApp.music.tags">Tags</span></dt>
+        <dd>
+            <span ng-repeat="tags in vm.music.tags">
+                <a ui-sref="tag-detail({id: tags.id})">{{tags.label}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+        <dt><span data-translate="musicFinderApp.music.artist">Artist</span></dt>
+        <dd>
+            <a ui-sref="artist-detail({id:vm.music.artist.id})">{{vm.music.artist.name}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="music-detail.edit({id:vm.music.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

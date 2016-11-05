@@ -1,0 +1,92 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myMusicLabel" data-translate="musicFinderApp.music.home.createOrEditLabel">Create or edit a Music</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.music.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.music.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="musicFinderApp.music.title" for="field_title">Title</label>
+            <input type="text" class="form-control" name="title" id="field_title"
+                    ng-model="vm.music.title"
+                    required ng-maxlength="256" />
+            <div ng-show="editForm.title.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.title.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.title.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="256">
+                    This field cannot be longer than 256 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="musicFinderApp.music.lyrics" for="field_lyrics">Lyrics</label>
+            <input type="text" class="form-control" name="lyrics" id="field_lyrics"
+                    ng-model="vm.music.lyrics"
+                    ng-maxlength="40000" />
+            <div ng-show="editForm.lyrics.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.lyrics.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="40000">
+                    This field cannot be longer than 40000 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="musicFinderApp.music.link" for="field_link">Link</label>
+            <input type="text" class="form-control" name="link" id="field_link"
+                    ng-model="vm.music.link"
+                    ng-maxlength="2048" ng-pattern="/.+/" />
+            <div ng-show="editForm.link.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.link.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="2048">
+                    This field cannot be longer than 2048 characters.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.link.$error.pattern" data-translate="entity.validation.pattern" translate-value-pattern=".+">
+                    This field should follow pattern ".+".
+                </p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label data-translate="musicFinderApp.music.tags" for="field_tags">Tags</label>
+            <select class="form-control" id="field_tags" multiple name="tags" ng-model="vm.music.tags" ng-options="tag as tag.label for tag in vm.tags track by tag.id" required></select>
+        </div>
+        <div ng-show="editForm.tags.$invalid">
+            <p class="help-block"
+                ng-show="editForm.tags.$error.required" data-translate="entity.validation.required">
+                This field is required.
+            </p>
+        </div>
+        <div class="form-group">
+            <label data-translate="musicFinderApp.music.artist" for="field_artist">Artist</label>
+            <select class="form-control" id="field_artist" name="artist" ng-model="vm.music.artist" ng-options="artist as artist.name for artist in vm.artists track by artist.id" required>
+                <option value=""></option>
+            </select>
+        </div>
+        <div ng-show="editForm.artist.$invalid">
+            <p class="help-block"
+                ng-show="editForm.artist.$error.required" data-translate="entity.validation.required">
+                This field is required.
+            </p>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>
