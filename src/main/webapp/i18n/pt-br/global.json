@@ -10,6 +10,7 @@
                 "artist": "Artist",
                 "tag": "Tag",
                 "music": "Music",
+                "vote": "Vote",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {
