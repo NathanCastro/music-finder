@@ -5,15 +5,14 @@
         .module('musicFinderApp')
         .controller('MusicDialogController', MusicDialogController);
 
-    MusicDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'Music', 'Tag', 'Artist'];
+    MusicDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'Music', 'Artist'];
 
-    function MusicDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, Music, Tag, Artist) {
+    function MusicDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, Music, Artist) {
         var vm = this;
 
         vm.music = entity;
         vm.clear = clear;
         vm.save = save;
-        vm.tags = Tag.query();
         vm.artists = Artist.query();
 
         $timeout(function (){

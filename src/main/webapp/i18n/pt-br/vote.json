@@ -1,0 +1,24 @@
+{
+    "musicFinderApp": {
+        "vote" : {
+            "home": {
+                "title": "Votes",
+                "createLabel": "Criar novo Vote",
+                "createOrEditLabel": "Criar ou editar Vote",
+                "search": "Pesquisar por Vote"
+            },
+            "created": "Um novo Vote é criado com o identificador {{ param }}",
+            "updated": "Um Vote é atualizado com o identificador {{ param }}",
+            "deleted": "Um Vote é deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Vote {{ id }}?"
+            },
+            "detail": {
+                "title": "Vote"
+            },
+            "music": "Music",
+            "tag": "Tag",
+            "user": "User"
+        }
+    }
+}

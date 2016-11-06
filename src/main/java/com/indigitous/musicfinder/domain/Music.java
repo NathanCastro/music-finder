@@ -5,8 +5,6 @@ import org.springframework.data.elasticsearch.annotations.Document;
 import javax.persistence.*;
 import javax.validation.constraints.*;
 import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Set;
 import java.util.Objects;
 
 /**
@@ -36,13 +34,6 @@ public class Music implements Serializable {
     @Pattern(regexp = ".+")
     @Column(name = "link", length = 2048)
     private String link;
-
-    @ManyToMany
-    @NotNull
-    @JoinTable(name = "music_tags",
-               joinColumns = @JoinColumn(name="music_id", referencedColumnName="ID"),
-               inverseJoinColumns = @JoinColumn(name="tags_id", referencedColumnName="ID"))
-    private Set<Tag> tags = new HashSet<>();
 
     @ManyToOne
     @NotNull
@@ -93,31 +84,6 @@ public class Music implements Serializable {
 
     public void setLink(String link) {
         this.link = link;
-    }
-
-    public Set<Tag> getTags() {
-        return tags;
-    }
-
-    public Music tags(Set<Tag> tags) {
-        this.tags = tags;
-        return this;
-    }
-
-    public Music addTags(Tag tag) {
-        tags.add(tag);
-        // tag.getMusics().add(this);
-        return this;
-    }
-
-    public Music removeTags(Tag tag) {
-        tags.remove(tag);
-        // tag.getMusics().remove(this);
-        return this;
-    }
-
-    public void setTags(Set<Tag> tags) {
-        this.tags = tags;
     }
 
     public Artist getArtist() {

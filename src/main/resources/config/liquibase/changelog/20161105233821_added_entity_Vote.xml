@@ -14,26 +14,22 @@
     <property name="floatType" value="float" dbms="mysql, oracle"/>
 
     <!--
-        Added the entity Music.
+        Added the entity Vote.
     -->
-    <changeSet id="20161105185146-1" author="jhipster">
-        <createTable tableName="music">
+    <changeSet id="20161105233821-1" author="jhipster">
+        <createTable tableName="vote">
             <column name="id" type="bigint" autoIncrement="${autoIncrement}">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="title" type="varchar(256)">
+            <column name="music_id" type="bigint">
                 <constraints nullable="false" />
             </column>
-            
-            <column name="lyrics" type="varchar(40000)">
-                <constraints nullable="true" />
+
+            <column name="tag_id" type="bigint">
+                <constraints nullable="false" />
             </column>
-            
-            <column name="link" type="varchar(2048)">
-                <constraints nullable="true" />
-            </column>
-            
-            <column name="artist_id" type="bigint">
+
+            <column name="user_id" type="bigint">
                 <constraints nullable="false" />
             </column>
 

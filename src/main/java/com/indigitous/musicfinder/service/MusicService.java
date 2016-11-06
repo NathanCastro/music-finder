@@ -67,7 +67,7 @@ public class MusicService {
     @Transactional(readOnly = true) 
     public Music findOne(Long id) {
         log.debug("Request to get Music : {}", id);
-        Music music = musicRepository.findOneWithEagerRelationships(id);
+        Music music = musicRepository.findOne(id);
         return music;
     }
 

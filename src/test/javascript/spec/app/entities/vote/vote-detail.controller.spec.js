@@ -2,9 +2,9 @@
 
 describe('Controller Tests', function() {
 
-    describe('Music Management Detail Controller', function() {
+    describe('Vote Management Detail Controller', function() {
         var $scope, $rootScope;
-        var MockEntity, MockPreviousState, MockMusic, MockArtist;
+        var MockEntity, MockPreviousState, MockVote, MockMusic, MockTag, MockUser;
         var createController;
 
         beforeEach(inject(function($injector) {
@@ -12,8 +12,10 @@ describe('Controller Tests', function() {
             $scope = $rootScope.$new();
             MockEntity = jasmine.createSpy('MockEntity');
             MockPreviousState = jasmine.createSpy('MockPreviousState');
+            MockVote = jasmine.createSpy('MockVote');
             MockMusic = jasmine.createSpy('MockMusic');
-            MockArtist = jasmine.createSpy('MockArtist');
+            MockTag = jasmine.createSpy('MockTag');
+            MockUser = jasmine.createSpy('MockUser');
             
 
             var locals = {
@@ -21,18 +23,20 @@ describe('Controller Tests', function() {
                 '$rootScope': $rootScope,
                 'entity': MockEntity,
                 'previousState': MockPreviousState,
+                'Vote': MockVote,
                 'Music': MockMusic,
-                'Artist': MockArtist
+                'Tag': MockTag,
+                'User': MockUser
             };
             createController = function() {
-                $injector.get('$controller')("MusicDetailController", locals);
+                $injector.get('$controller')("VoteDetailController", locals);
             };
         }));
 
 
         describe('Root Scope Listening', function() {
             it('Unregisters root scope listener upon scope destruction', function() {
-                var eventType = 'musicFinderApp:musicUpdate';
+                var eventType = 'musicFinderApp:voteUpdate';
 
                 createController();
                 expect($rootScope.$$listenerCount[eventType]).toEqual(1);
